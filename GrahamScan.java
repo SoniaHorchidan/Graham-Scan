@@ -107,8 +107,8 @@ public class GrahamScan extends JFrame{
 			System.out.println(p);
 	}
 	public static void main(String[] args) {
-		   Scanner scanner = new Scanner(System.in);
-		   System.out.println("Dati numarul de varfuri ale poligonului: ");
+	        Scanner scanner = new Scanner(System.in);
+		System.out.println("Dati numarul de varfuri ale poligonului: ");
 	        int n = scanner.nextInt();
 	        points = new Point2D.Double[n + 1];
 	        copyPoints = new Point2D.Double[n];
@@ -124,8 +124,8 @@ public class GrahamScan extends JFrame{
 	        
 	        System.out.println("Dati coordonatele punctului exterior: ");
 	        double x = scanner.nextDouble();
-            double y =scanner.nextDouble();
-            points[n] = new Point2D.Double(x, y);
+                double y =scanner.nextDouble();
+                points[n] = new Point2D.Double(x, y);
 	        
 	        GrahamScan grahamscan = new GrahamScan();
 	        grahamscan.print();

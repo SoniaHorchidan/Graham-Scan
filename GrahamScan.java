@@ -50,7 +50,6 @@ public class GrahamScan extends JFrame{
 	 }
 	
 	public boolean isCounterClock(Point2D.Double P, Point2D.Double Q, Point2D.Double R){
-		//return 0 ==>  coliniare; >0 ==> CounterClock;  < 0 ==> Clock
 		return Q.x * R.y + P.x * Q.y + P.y * R.x - P.y * Q.x - Q.y * R.x - P.x * R.y > 0;
 	}
 	public void solve(){
@@ -107,12 +106,12 @@ public class GrahamScan extends JFrame{
 			System.out.println(p);
 	}
 	public static void main(String[] args) {
-		   Scanner scanner = new Scanner(System.in);
-		   System.out.println("Dati numarul de varfuri ale poligonului: ");
+		Scanner scanner = new Scanner(System.in);
+	        System.out.println("Dati numarul de puncte: ");
 	        int n = scanner.nextInt();
 	        points = new Point2D.Double[n + 1];
 	        copyPoints = new Point2D.Double[n];
-	        System.out.println("Dati coordonatele punctelor poligonului: ");
+	        System.out.println("Dati coordonatele punctelor: ");
 	        for (int i = 0; i < n; i++) {
 	            double x = scanner.nextDouble();
 	            double y =scanner.nextDouble();
@@ -121,11 +120,6 @@ public class GrahamScan extends JFrame{
 	        
 	        for(int i = 0; i < points.length - 1; i ++)
 	        	copyPoints[i] = points[i];
-	        
-	        System.out.println("Dati coordonatele punctului exterior: ");
-	        double x = scanner.nextDouble();
-            double y =scanner.nextDouble();
-            points[n] = new Point2D.Double(x, y);
 	        
 	        GrahamScan grahamscan = new GrahamScan();
 	        grahamscan.print();
